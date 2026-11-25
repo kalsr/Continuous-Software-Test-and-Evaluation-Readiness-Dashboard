@@ -1,0 +1,276 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentic-AI Applications | Kalsnet</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: white;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 42px;
+            color: #00e6ff;
+            margin-bottom: 10px;
+        }
+
+        p.subtitle {
+            font-size: 18px;
+            color: #cceeff;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            padding: 30px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.08);
+            border-radius: 15px;
+            padding: 25px;
+            transition: 0.3s ease;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.4);
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            background: rgba(0,230,255,0.10);
+        }
+
+        .card h2 {
+            color: #00ffff;
+            font-size: 25px;
+            margin-bottom: 18px;
+            text-align: center;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section h3 {
+            color: #00e6ff;
+            font-size: 20px;
+            border-bottom: 2px solid rgba(0,230,255,0.5);
+            padding-bottom: 8px;
+            margin-bottom: 12px;
+        }
+
+        .section p {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #d9faff;
+            margin: 0;
+            text-align: justify;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            background: #00e6ff;
+            color: black;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #00bcd4;
+            transform: scale(1.05);
+        }
+
+        .launch {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            .card {
+                padding: 18px;
+            }
+
+            .section p {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Software-Readiness-Testing-Dashboard</h1>
+    <p class="subtitle">
+        Kalsnet (KNet) Consulting Group |
+        AI • Cyber • Agentic Systems/GraphTheory
+    </p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+
+        <h2>Software-Readiness-Testing-Dashboard</h2>
+
+        <!-- WHAT THE APPLICATION DOES -->
+        <div class="section">
+            <h3>What the Application Does</h3>
+            <p>
+                The Continuous Software Test and Evaluation Readiness
+                Dashboard, developed by Randy Singh from Kalsnet (KNet)
+                Consulting Group, addresses a core problem in defense &
+                Other software industry today: new releases can be built and fielded
+                much faster than they can be objectively assessed.
+                The dashboard collects the evidence that an automated
+                software pipeline already produces and turns it into
+                a clear, consistent readiness decision for every
+                release. Each release candidate receives one of three
+                outcomes: approve, conditional approval, or not ready.
+                Every outcome comes with the evidence and reasoning
+                behind it, so reviewers can approve good releases
+                quickly and focus their time on the ones that need
+                attention.
+            </p>
+        </div>
+
+        <!-- HOW IT WORKS -->
+        <div class="section">
+            <h3>How It Works</h3>
+            <p>
+                The application scores each release across four evidence
+                pillars, each rated from zero to one hundred. Test quality
+                combines the test pass rate, code coverage and the share
+                of requirements linked to passing tests, and reduces the
+                score for tests that were skipped. Security starts from
+                vulnerability findings weighted by severity, so critical
+                findings cost the most points, then adds credit for
+                security hardening compliance and subtracts points when
+                a software bill of materials is missing or the build is
+                not signed. Performance compares measured response time
+                under load with the required response time. Stability
+                uses the share of recent deployments that caused failures
+                and the size of the code change. The four pillars are
+                combined with weights into one readiness score. That
+                score is checked against a required bar that rises with
+                mission criticality, and the remaining risk is scaled by
+                how critical the system is and how many mission threads
+                it supports. Release gates then act as firm stop points,
+                for example an open critical vulnerability on a high
+                criticality system or an unsigned build headed for
+                operational use. When historical data shows whether
+                fielded releases later caused incidents, the dashboard
+                also checks how well its decisions predicted those
+                incidents.
+            </p>
+        </div>
+
+        <!-- DATA AND EVIDENCE HANDLING -->
+        <div class="section">
+            <h3>Data and Evidence Handling</h3>
+            <p>
+                The dashboard works with synthetic data for training,
+                demonstrations and testing, or with real release records
+                uploaded as CSV files. It reads standard pipeline outputs
+                directly, including JUnit XML test reports, SARIF security
+                scan reports and scanner CSV files, and uses them to fill
+                in the release evaluation form automatically. Results can
+                be exported as CSV, plain text, Word or PDF, and existing
+                result files in any of those formats can be uploaded and
+                viewed inside the application.
+            </p>
+        </div>
+
+        <!-- TOOLS USED -->
+        <div class="section">
+            <h3>Tools Used</h3>
+            <p>
+                The application is written in Python, with Streamlit
+                providing the interactive web interface. Pandas and
+                NumPy handle data processing and the synthetic data
+                generator, and Altair draws the charts, heatmaps and
+                trend lines. Graphviz renders the flowcharts in the
+                guide. The Python XML and JSON libraries parse test
+                and security scan reports, while python-docx, pypdf
+                and fpdf2 create and read Word and PDF files.
+            </p>
+        </div>
+
+        <!-- REAL WORLD BENEFITS -->
+        <div class="section">
+            <h3>Real-World Benefits</h3>
+            <p>
+                The dashboard shortens approval time by replacing weeks
+                of manual evidence gathering with an automated,
+                repeatable assessment that runs with every build. It
+                gives decision makers a defensible audit trail, because
+                every score, gate and formula is visible and explained.
+                Every release is held to the same standard, which
+                reduces subjective judgment and inconsistency between
+                reviewers. Raising the bar for mission critical systems
+                matches the depth of review to operational risk.
+                Security and supply chain risks are surfaced early
+                through vulnerability, software bill of materials and
+                signing checks. Program managers get a portfolio view
+                showing which systems are improving or slipping. Over
+                time, comparing decisions with real field outcomes lets
+                the organization tune the weights and thresholds so
+                its assessment process keeps getting better. The result
+                is that warfighters receive capability faster while
+                confidence in what is being fielded stays high.
+            </p>
+        </div>
+
+        <!-- APPLICATION LAUNCH BUTTON -->
+        <div class="launch">
+            <a href="https://ks9nsc3xbif8kjfzz8me43.streamlit.app/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn">
+                Launch Application
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    © 2026 Kalsnet (KNet) Consulting Group |
+    Agentic-AI Solutions
+</footer>
+
+</body>
+</html>
